@@ -1,0 +1,19 @@
+{% extends 'base.twig' %}
+
+{% block content %}
+    <h1>Index</h1>
+    <a href="index.php?page=flash">Ajouter un flash</a>
+    <a href="index.php?page=mail">Envoyer un email</a>
+
+
+    <h2>flash</h2>
+    {% for type, flash in flashes %}
+        <div>
+            type = {{ type }}
+
+            {% for message in flash %}
+                {{ message }} <br>
+            {% endfor %}
+        </div>
+    {% endfor %}
+{% endblock %}

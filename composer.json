@@ -1,0 +1,22 @@
+{
+  "name": "paul/ex-mvc",
+  "authors": [
+    {
+      "name": "Paul Petit",
+      "email": "paul.petit76@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src"
+    }
+  },
+  "require": {
+    "twig/twig": "^2.0",
+    "respect/validation": "^1.1",
+    "phpmailer/phpmailer": "^6.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*"
+  }
+}

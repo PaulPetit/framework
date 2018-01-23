@@ -63,8 +63,7 @@ class Router
         if ($isPage) {
             $url = 'index.php?page=' . $url;
         }
-        echo "<script> console.log('Redirection vers : {$url}') </script>";
-        echo "<script> window.location = '{$url}' </script>";
+        header("Location: {$url}");
         exit();
     }
 }

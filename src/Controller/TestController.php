@@ -12,7 +12,7 @@ class TestController extends Controller
 
     public function displayHomeAction()
     {
-        $this->view->render('index.twig');
+        $this->view->render('pages/index.twig');
     }
 
     public function addFlash()

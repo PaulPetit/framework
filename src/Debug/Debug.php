@@ -9,7 +9,8 @@ namespace App\Debug;
 class Debug
 {
     /**
-     * @param $var
+     * Effectue un var_dump() de la variable
+     * @param $var Variable à afficher
      */
     public static function dump($var)
     {
@@ -19,7 +20,8 @@ class Debug
     }
 
     /**
-     * @param $var
+     * Effectue un var_dump() de la variable puis arrête le script
+     * @param $var Variable à afficher
      */
     public static function dumpDie($var)
     {
@@ -30,23 +32,11 @@ class Debug
     }
 
     /**
-     * @param $var
+     * Affiche la variable dans la console du navigateur
+     * @param $var Variable à afficher
      */
-    public static function print($var)
+    public static function log($var)
     {
-        echo '<pre>';
-        print_r($var, false);
-        echo '</pre>';
-    }
-
-    /**
-     * @param $var
-     */
-    public static function printDie($var)
-    {
-        echo '<pre>';
-        print_r($var, false);
-        echo '</pre>';
-        die();
+        echo "<script>console.log('{$var}')</script>";
     }
 }
